@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 추억 서랍 사용 가이드 & 도움말</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&display=swap');
+    
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+
+    .wood-cabinet {
+      background: linear-gradient(145deg, #3A2312 0%, #1F1108 100%);
+      border: 3.5px solid #6A3B1C;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 10px 25px rgba(0,0,0,0.5);
+    }
+    
+    .wood-card {
+      background: linear-gradient(135deg, #2A1A10 0%, #1A0E08 100%);
+      border: 1.5px solid #523522;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .brass-badge {
+      background: linear-gradient(135deg, #F3C47A 0%, #B87B2E 100%);
+      color: #1A0E08;
+      font-weight: 800;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .brass-text {
+      background: linear-gradient(135deg, #FBE3B5 0%, #E2A85C 50%, #B87B2E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brass-handle {
+      width: 48px;
+      height: 12px;
+      border: 3px solid #F3C47A;
+      border-bottom: none;
+      border-radius: 6px 6px 0 0;
+      background: linear-gradient(180deg, #FFE8BD 0%, #B87B2E 100%);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.6);
+    }
+
+    .pulse-glow {
+      animation: pulseGlow 2.5s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 8px rgba(226, 168, 92, 0.2); }
+      100% { box-shadow: 0 0 20px rgba(226, 168, 92, 0.6); }
+    }
+  </style>
+</head>
+<body class="bg-stone-900 text-stone-100 antialiased p-3 md:p-6">
+  <div class="max-w-4xl mx-auto space-y-6">
+
+    <!-- Header Banner -->
+    <div class="wood-cabinet rounded-3xl p-6 md:p-8 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 pulse-glow">
+      <div class="space-y-3 z-10 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E2A85C]/15 border border-[#E2A85C]/30 text-[#F3C47A] text-xs font-bold tracking-wide">
+          <span>🧠 100% On-Device AI</span>
+          <span class="text-[#E2A85C]/40">•</span>
+          <span>🔒 개인정보 완벽 보호</span>
+          <span class="text-[#E2A85C]/40">•</span>
+          <span>v1.0.9</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
+          📂 AI 추억 서랍 <span class="brass-text">사용 도움말</span>
+        </h1>
+        <p class="text-stone-300 text-sm md:text-base leading-relaxed max-w-xl font-medium">
+          어지러운 스마트폰 갤러리 사진을 온디바이스 AI가 자동으로 정돈해 드립니다. 어르신도 보기 쉬운 입체 원목 서랍장 가이드입니다.
+        </p>
+      </div>
+
+      <!-- 3D Cabinet Visual Badge -->
+      <div class="wood-card w-28 h-28 md:w-36 md:h-36 rounded-2xl flex flex-col items-center justify-between p-3 shrink-0 relative border-2 border-[#6A3B1C] shadow-2xl">
+        <div class="w-full flex justify-between items-center text-xs">
+          <span class="text-amber-400/80 font-mono font-bold">AI Drawer</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        </div>
+        <div class="text-4xl my-auto drop-shadow-md">🪵</div>
+        <div class="brass-handle"></div>
+      </div>
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <a href="#intro" class="wood-card p-3.5 rounded-2xl text-center hover:border-[#E2A85C] transition-all group">
+        <div class="text-2xl mb-1 group-hover:scale-110 transition-transform">🌟</div>
+        <div class="text-xs font-extrabold text-stone-200">앱 소개</div>
+      </a>
+      <a href="#features" class="wood-card p-3.5 rounded-2xl text-center hover:border-[#E2A85C] transition-all group">
+        <div class="text-2xl mb-1 group-hover:scale-110 transition-transform">🗄️</div>
+        <div class="text-xs font-extrabold text-stone-200">5대 핵심기능</div>
+      </a>
+      <a href="#learning" class="wood-card p-3.5 rounded-2xl text-center hover:border-[#E2A85C] transition-all group">
+        <div class="text-2xl mb-1 group-hover:scale-110 transition-transform">🧠</div>
+        <div class="text-xs font-extrabold text-stone-200">AI 학습방 사용법</div>
+      </a>
+      <a href="#faq" class="wood-card p-3.5 rounded-2xl text-center hover:border-[#E2A85C] transition-all group">
+        <div class="text-2xl mb-1 group-hover:scale-110 transition-transform">❓</div>
+        <div class="text-xs font-extrabold text-stone-200">자주 묻는 질문</div>
+      </a>
+    </div>
+
+    <!-- Section 1: 앱 소개 -->
+    <div id="intro" class="bg-stone-850 border border-stone-700/60 rounded-3xl p-6 space-y-4 shadow-sm">
+      <h2 class="text-xl font-bold flex items-center gap-2">
+        <span class="text-2xl">🌟</span> <span class="brass-text font-black text-2xl">AI 추억 서랍이란?</span>
+      </h2>
+      <p class="text-stone-300 leading-relaxed text-sm md:text-base">
+        <strong>AI 추억 서랍</strong>은 스마트폰에 쌓여가는 수천 장의 사진(가족, 여행, 음식, 반려동물, 문서 등)을 인공지능이 자동으로 인식하여 주제별 3D 입체 서랍장에 알아서 착착 정돈해 주는 스마트 갤러리 앱입니다.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-2xl bg-stone-800/80 border border-stone-700/80 space-y-1.5">
+          <div class="font-extrabold text-amber-400 flex items-center gap-1.5">
+            <span>🔒</span> 100% 온디바이스 AI
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            사진이 외부 서버로 유출되지 않으며 와이파이나 데이터가 없어도 스마트폰 안에서 100% 안전하게 동작합니다.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-stone-800/80 border border-stone-700/80 space-y-1.5">
+          <div class="font-extrabold text-amber-400 flex items-center gap-1.5">
+            <span>👵</span> 어르신 맞춤 3D 원목 UI
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            시원한 큰 글씨와 고급스러운 3D 원목 서랍장 손잡이 디자인으로 누구나 직관적이고 쉽게 사용할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-stone-800/80 border border-stone-700/80 space-y-1.5">
+          <div class="font-extrabold text-amber-400 flex items-center gap-1.5">
+            <span>🎓</span> 사용자가 직접 가르치는 AI
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            AI 학습방(+1000점) 및 잘못된 #태그 삭제(-500점 감점) 기능으로 쓸수록 내 취향에 맞게 더욱 똑똑해집니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: 5대 핵심 기능 -->
+    <div id="features" class="bg-stone-850 border border-stone-700/60 rounded-3xl p-6 space-y-4 shadow-sm">
+      <h2 class="text-xl font-bold flex items-center gap-2">
+        <span class="text-2xl">🗄️</span> <span class="brass-text font-black text-2xl">5대 핵심 기능 안내</span>
+      </h2>
+      <div class="grid grid-cols-1 gap-3">
+        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-stone-800/50 border border-stone-700/50">
+          <span class="text-2xl p-2 rounded-xl bg-amber-500/10 shrink-0">🤖</span>
+          <div class="space-y-1">
+            <div class="font-extrabold text-white text-base">주제별 3D 서랍장 자동 정돈</div>
+            <p class="text-xs md:text-sm text-stone-300 leading-relaxed">
+              가족(👨‍👩‍👧‍👦), 여행(✈️), 음식(🍕), 반려동물(🐶), 풍경/자연(🌿) 등 다양한 주제별로 AI가 사진을 자동 스캔하여 서랍장에 대분류해 드립니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-stone-800/50 border border-stone-700/50">
+          <span class="text-2xl p-2 rounded-xl bg-amber-500/10 shrink-0">🧠</span>
+          <div class="space-y-1">
+            <div class="font-extrabold text-white text-base">AI 학습방 (우선순위 +1000점)</div>
+            <p class="text-xs md:text-sm text-stone-300 leading-relaxed">
+              AI가 미처 알지 못한 특이한 사진을 학습방에 등록하면 가중치 **+1000점**이 부여되어 내가 원하는 서랍장으로 정확하게 골인합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-stone-800/50 border border-stone-700/50">
+          <span class="text-2xl p-2 rounded-xl bg-amber-500/10 shrink-0">🏷️</span>
+          <div class="space-y-1">
+            <div class="font-extrabold text-white text-base">#태그 삭제 & AI 부정 학습 (-500점 패널티)</div>
+            <p class="text-xs md:text-sm text-stone-300 leading-relaxed">
+              사진 상세에서 잘못 달린 `#태그` 칩의 `[x]` 버튼을 삭제하면 AI 오답 학습 패널티(**-500점**)가 차감되어 다음부터 엉뚱한 서랍장으로 오분류하는 것을 방지합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-stone-800/50 border border-stone-700/50">
+          <span class="text-2xl p-2 rounded-xl bg-amber-500/10 shrink-0">📍</span>
+          <div class="space-y-1">
+            <div class="font-extrabold text-white text-base">추억 지도 탐색 (국내 & 글로벌 지도)</div>
+            <p class="text-xs md:text-sm text-stone-300 leading-relaxed">
+              대한민국 전국 방방곡곡은 물론, 일본, 중국, 미국, 유럽, 라틴아메리카 등 위치 정보(GPS)가 담긴 사진을 지도 위에서 실시간으로 감상할 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-stone-800/50 border border-stone-700/50">
+          <span class="text-2xl p-2 rounded-xl bg-amber-500/10 shrink-0">📅</span>
+          <div class="space-y-1">
+            <div class="font-extrabold text-white text-base">촬영 연도별 타임라인</div>
+            <p class="text-xs md:text-sm text-stone-300 leading-relaxed">
+              2026년, 2025년, 2024년... 상단 연도별 탭을 터치하여 소중한 지나간 시간의 기억들을 한눈에 편리하게 탐색해보세요.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: AI 학습방 사용 순서 -->
+    <div id="learning" class="wood-cabinet rounded-3xl p-6 space-y-4 text-white shadow-2xl">
+      <h2 class="text-xl font-bold brass-text flex items-center gap-2">
+        <span class="text-2xl">🎓</span> <span class="text-2xl font-black">AI 학습방 손쉬운 4단계 사용법</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+        <div class="wood-card p-4 rounded-2xl space-y-2 border border-[#523522]">
+          <div class="w-8 h-8 rounded-full brass-badge flex items-center justify-center text-stone-900 font-extrabold text-sm">1</div>
+          <div class="font-extrabold text-[#F3C47A]">학습방 탭 이동</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            메인 하단 메뉴에서 <strong>[🧠 AI 학습방]</strong> 탭을 선택합니다.
+          </p>
+        </div>
+        <div class="wood-card p-4 rounded-2xl space-y-2 border border-[#523522]">
+          <div class="w-8 h-8 rounded-full brass-badge flex items-center justify-center text-stone-900 font-extrabold text-sm">2</div>
+          <div class="font-extrabold text-[#F3C47A]">사진 선택</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            <strong>[+ AI 학습시키기]</strong> 버튼을 눌러 AI에게 가르칠 사진을 고릅니다.
+          </p>
+        </div>
+        <div class="wood-card p-4 rounded-2xl space-y-2 border border-[#523522]">
+          <div class="w-8 h-8 rounded-full brass-badge flex items-center justify-center text-stone-900 font-extrabold text-sm">3</div>
+          <div class="font-extrabold text-[#F3C47A]">독립 안전 보관</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            선택한 사진은 메인 서랍에 섞이지 않고 학습방에 안전하게 격리됩니다.
+          </p>
+        </div>
+        <div class="wood-card p-4 rounded-2xl space-y-2 border border-[#523522]">
+          <div class="w-8 h-8 rounded-full brass-badge flex items-center justify-center text-stone-900 font-extrabold text-sm">4</div>
+          <div class="font-extrabold text-[#F3C47A]">AI 정리 실행</div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            <strong>[✨ AI 추억 정리 시작하기]</strong>를 터치하면 학습 점수가 반영되어 자동 분류됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: FAQ -->
+    <div id="faq" class="bg-stone-850 border border-stone-700/60 rounded-3xl p-6 space-y-4 shadow-sm">
+      <h2 class="text-xl font-bold flex items-center gap-2">
+        <span class="text-2xl">❓</span> <span class="brass-text font-black text-2xl">자주 묻는 질문 (FAQ)</span>
+      </h2>
+      <div class="space-y-3">
+        <details class="p-4 rounded-2xl bg-stone-800/60 border border-stone-700/60 cursor-pointer group">
+          <summary class="font-extrabold text-stone-200 group-hover:text-amber-400 transition flex items-center justify-between">
+            <span>Q1. 인터넷이나 와이파이가 안 되어도 사용할 수 있나요?</span>
+            <span class="text-amber-400 text-xs font-mono">▼</span>
+          </summary>
+          <div class="mt-3 text-xs md:text-sm text-stone-400 leading-relaxed pl-4 border-l-2 border-amber-500 space-y-1">
+            <p><strong>네, 100% 전용 오프라인 구동이 가능합니다!</strong></p>
+            <p>모든 인공지능 이미지 분석 및 글씨 인식 기술은 고객님의 스마트폰 기기 내부(On-Device)에서 직접 처리됩니다. 데이터 요금이 전혀 발생하지 않으며 비행기 모드에서도 완벽히 작동합니다.</p>
+          </div>
+        </details>
+
+        <details class="p-4 rounded-2xl bg-stone-800/60 border border-stone-700/60 cursor-pointer group">
+          <summary class="font-extrabold text-stone-200 group-hover:text-amber-400 transition flex items-center justify-between">
+            <span>Q2. 잘못 달린 #태그를 삭제하면 AI는 어떻게 학습하나요?</span>
+            <span class="text-amber-400 text-xs font-mono">▼</span>
+          </summary>
+          <div class="mt-3 text-xs md:text-sm text-stone-400 leading-relaxed pl-4 border-l-2 border-amber-500 space-y-1">
+            <p>사진 상세 모달에서 잘못 분류된 태그의 [x] 버튼을 누르면, AI 엔진이 <strong>오답 패널티(-500점 감점)</strong>를 학습합니다.</p>
+            <p>이후 유사한 사진이 들어와도 해당 서랍장으로 오분류되는 현상이 근본적으로 차단됩니다.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-xs text-stone-400 py-4 border-t border-stone-800 space-y-1">
+      <div class="font-bold brass-text">📂 AI 추억 서랍 (Memory Drawer) v1.0.9</div>
+      <div class="text-stone-500">Copyright © 2026 Memory Drawer Team. All rights reserved.</div>
+    </div>
+
+  </div>
+</body>
+</html>
